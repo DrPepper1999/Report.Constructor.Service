@@ -1,0 +1,38 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "AuditReportFilters";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+import "Protos/enums.proto";
+
+message TimeIntervalFilter {
+  google.protobuf.Timestamp time_start = 1;
+  google.protobuf.Timestamp time_end = 2;
+}
+
+message OperationPlayerActionFilter {
+  google.protobuf.StringValue user_id = 1;
+  google.protobuf.StringValue activity_type = 2;
+  TimeIntervalFilter time_interval_filter = 3;
+}
+
+message OperationScreenshotJobCrudFilter {
+  int32 operation_type = 1;
+  TimeIntervalFilter time_interval_filter = 2;
+}
+
+message CameraIdFilter {
+  google.protobuf.StringValue camera_id = 1;
+  TimeIntervalFilter time_interval_filter = 3;
+}
+
+message TokenIdsFilter {
+  TimeIntervalFilter time_interval_filter = 1;
+  repeated string token_ids = 2;
+}
+
+message ArchiveViewFilter {
+  TokenIdsFilter token_ids_filter = 1;
+  repeated ArchiveViewActionType actions = 2;
+}

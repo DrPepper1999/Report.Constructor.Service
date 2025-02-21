@@ -1,0 +1,29 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "AuditReportEnums";
+
+enum ReportType {
+  OperationOrderArchive = 0;
+  UserControl = 1;
+  UserEdits = 2;
+  OperationPlayerAction = 3;
+  OperationGetLiveUrl = 4;
+  OperationSharedLinkAction = 5;
+  UserGroupControl = 6;
+  OperationScreenshotJobCrud = 7;
+  OperationMoveCommand = 8;
+  LiveView = 9;
+  ArchiveView = 10;
+}
+
+enum ArchiveViewActionType
+{
+  play = 0;
+  rplay = 1;
+  stop = 3;
+  start = 4;
+  abseek = 5;
+  shift = 6;
+  pause = 7;
+  scale = 8;
+}

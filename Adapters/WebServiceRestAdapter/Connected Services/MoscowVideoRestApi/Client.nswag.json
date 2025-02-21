@@ -1,0 +1,6581 @@
+﻿{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "HP.CityMonitoring.RestApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/camera-action/get-camera-action-infos": {
+      "post": {
+        "tags": [
+          "CameraAction"
+        ],
+        "operationId": "get-camera-action-infos",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CameraActionInfoRequest"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CameraActionInfoRequest"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CameraActionInfoRequest"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CameraActionInfo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CameraActionInfo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CameraActionInfo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cameraisvr/process": {
+      "post": {
+        "tags": [
+          "CameraIsvr"
+        ],
+        "operationId": "process",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IsvrMessageValueKafkaMessage"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IsvrMessageValueKafkaMessage"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/IsvrMessageValueKafkaMessage"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/cameras/get-cameras-info": {
+      "post": {
+        "tags": [
+          "Cameras"
+        ],
+        "operationId": "get-cameras-info",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCamerasInfoResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCamerasInfoResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCamerasInfoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/camera-title/address": {
+      "post": {
+        "tags": [
+          "CameraTitle"
+        ],
+        "operationId": "address",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDistrictModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDistrictModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDistrictModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/camera-title/service-type": {
+      "post": {
+        "tags": [
+          "CameraTitle"
+        ],
+        "operationId": "service-type",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceTypeModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceTypeModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateServiceTypeModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/download/generate-screenshot-zip-url": {
+      "post": {
+        "tags": [
+          "DownloadHashed"
+        ],
+        "operationId": "generate-screenshot-zip-url",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScreenshotZipUrlHashDataModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScreenshotZipUrlHashDataModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScreenshotZipUrlHashDataModel"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringSimpleApiResponseModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringSimpleApiResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringSimpleApiResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/download/validate-decode": {
+      "post": {
+        "tags": [
+          "DownloadHashed"
+        ],
+        "operationId": "validate-decode",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HashedData"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HashedData"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HashedData"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringSimpleApiResponseModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringSimpleApiResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StringSimpleApiResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/CheckUserLogin": {
+      "get": {
+        "tags": [
+          "Esk"
+        ],
+        "operationId": "CheckUserLogin",
+        "parameters": [
+          {
+            "name": "login",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/healthCheckContentSharing": {
+      "get": {
+        "tags": [
+          "Esk"
+        ],
+        "operationId": "healthCheckContentSharing",
+        "parameters": [
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/exclusion-notification-rule/send": {
+      "post": {
+        "tags": [
+          "ExclusionNotificationRule"
+        ],
+        "operationId": "send",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExclusionNotificationModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExclusionNotificationModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExclusionNotificationModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/reports-tech/cameras-titles": {
+      "post": {
+        "tags": [
+          "ReportsTech"
+        ],
+        "operationId": "cameras-titles",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCamerasTitlesRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCamerasTitlesRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCamerasTitlesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCamerasTitlesResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCamerasTitlesResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCamerasTitlesResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/reports-tech/cameras-grouped-by-operator-and-state": {
+      "post": {
+        "tags": [
+          "ReportsTech"
+        ],
+        "operationId": "cameras-grouped-by-operator-and-state",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCamerasGroupedByOperatorAndStateRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCamerasGroupedByOperatorAndStateRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCamerasGroupedByOperatorAndStateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCamerasGroupedByOperatorAndStateResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCamerasGroupedByOperatorAndStateResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetCamerasGroupedByOperatorAndStateResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/reports-tech/users-user-group-data": {
+      "post": {
+        "tags": [
+          "ReportsTech"
+        ],
+        "operationId": "users-user-group-data",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersUserGroupDataRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersUserGroupDataRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersUserGroupDataRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUsersUserGroupDataResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUsersUserGroupDataResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUsersUserGroupDataResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/reports-tech/update-report-state": {
+      "post": {
+        "tags": [
+          "ReportsTech"
+        ],
+        "operationId": "update-report-state",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateReportStateRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateReportStateRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateReportStateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/reports-tech/users-login": {
+      "post": {
+        "tags": [
+          "ReportsTech"
+        ],
+        "operationId": "users-login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersLoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersLoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersLoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUsersLoginResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUsersLoginResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUsersLoginResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/reports-tech/users-logins": {
+      "post": {
+        "tags": [
+          "ReportsTech"
+        ],
+        "operationId": "users-logins",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersLoginsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersLoginsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetUsersLoginsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUsersLoginsResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUsersLoginsResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetUsersLoginsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/staff-cameras": {
+      "post": {
+        "tags": [
+          "RoleModel"
+        ],
+        "operationId": "staff-cameras",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffsCameraRightsDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffsCameraRightsDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffsCameraRightsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/staff-cameras-groups/delete": {
+      "post": {
+        "tags": [
+          "RoleModel"
+        ],
+        "operationId": "delete",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteStaffCamerasDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteStaffCamerasDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteStaffCamerasDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/staff-camera-groups": {
+      "post": {
+        "tags": [
+          "RoleModel"
+        ],
+        "operationId": "staff-camera-groups",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffCameraGroupRightsDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffCameraGroupRightsDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffCameraGroupRightsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/staff/update-serviceTypes": {
+      "post": {
+        "tags": [
+          "RoleModel"
+        ],
+        "operationId": "update-serviceTypes",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffIdsDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffIdsDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffIdsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/staff-cameras-groups/hash": {
+      "post": {
+        "tags": [
+          "RoleModel"
+        ],
+        "operationId": "hash",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffIdsDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffIdsDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffIdsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompareHashesDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompareHashesDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CompareHashesDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/staff/spoil-session": {
+      "post": {
+        "tags": [
+          "RoleModel"
+        ],
+        "operationId": "spoil-session",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpoilStaffSessionDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpoilStaffSessionDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SpoilStaffSessionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/staff/staff-infos": {
+      "post": {
+        "tags": [
+          "RoleModel"
+        ],
+        "operationId": "staff-infos",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffInfosBatchDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffInfosBatchDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffInfosBatchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/staff/staff-info-search": {
+      "post": {
+        "tags": [
+          "RoleModel"
+        ],
+        "operationId": "staff-info-search",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffInfoSearchRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffInfoSearchRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StaffInfoSearchRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StaffInfoDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StaffInfoDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StaffInfoDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/staff/staff-info-keys": {
+      "get": {
+        "tags": [
+          "RoleModel"
+        ],
+        "operationId": "staff-info-keys",
+        "parameters": [
+          {
+            "name": "Skip",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Take",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "IsGroup",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/staff/staff-info-total-count": {
+      "get": {
+        "tags": [
+          "RoleModel"
+        ],
+        "operationId": "staff-info-total-count",
+        "parameters": [
+          {
+            "name": "isGroup",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RoleModelOperations/role-model-operations/add-packages-to-quotas": {
+      "post": {
+        "tags": [
+          "RoleModelOperations"
+        ],
+        "operationId": "add-packages-to-quotas",
+        "parameters": [
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPackagesToQuotasRequestModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPackagesToQuotasRequestModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPackagesToQuotasRequestModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/QuotaPackageDtoCommonResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/QuotaPackageDtoCommonResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/QuotaPackageDtoCommonResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/RoleModelOperations/role-model-operations/delete-devices-from-packages": {
+      "post": {
+        "tags": [
+          "RoleModelOperations"
+        ],
+        "operationId": "delete-devices-from-packages",
+        "parameters": [
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteCamerasOrCameraGroupsFromPackagesRequestModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteCamerasOrCameraGroupsFromPackagesRequestModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteCamerasOrCameraGroupsFromPackagesRequestModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteCamerasOrCameraGroupsFromPackagesResponseModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteCamerasOrCameraGroupsFromPackagesResponseModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteCamerasOrCameraGroupsFromPackagesResponseModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/screenshots-planner/has-working-screenshot-schedule": {
+      "post": {
+        "tags": [
+          "ScreenshotPlanner"
+        ],
+        "operationId": "has-working-screenshot-schedule",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HasWorkingScreenshotScheduleInTimePeriodRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HasWorkingScreenshotScheduleInTimePeriodRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HasWorkingScreenshotScheduleInTimePeriodRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/screenshots/getcameralocations": {
+      "post": {
+        "tags": [
+          "Screenshots"
+        ],
+        "operationId": "getcameralocations",
+        "parameters": [
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CameraLocation"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CameraLocation"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CameraLocation"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/screenshots/jobsbyhistory/{screenshotHistoryId}": {
+      "get": {
+        "tags": [
+          "Screenshots"
+        ],
+        "operationId": "jobsbyhistory",
+        "parameters": [
+          {
+            "name": "ScreenshotHistoryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "StartDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "EndDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "OnlyIsActive",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ScreenshotJobInfo"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ScreenshotJobInfo"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ScreenshotJobInfo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/screenshots/jobbyscreenshotjobid/{screenshotJobId}": {
+      "get": {
+        "tags": [
+          "Screenshots"
+        ],
+        "operationId": "jobbyscreenshotjobid",
+        "parameters": [
+          {
+            "name": "screenshotJobId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenshotJobInfo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenshotJobInfo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenshotJobInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/screenshots/screenshotjobinfo/{screenshotJobId}": {
+      "get": {
+        "tags": [
+          "Screenshots"
+        ],
+        "operationId": "screenshotjobinfo",
+        "parameters": [
+          {
+            "name": "screenshotJobId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenshotJobData"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenshotJobData"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScreenshotJobData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/screenshots/getscreenshotjobidsbyhistoryid": {
+      "get": {
+        "tags": [
+          "Screenshots"
+        ],
+        "operationId": "getscreenshotjobidsbyhistoryid",
+        "parameters": [
+          {
+            "name": "ScreenshotJobHistoryId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "TimeStart",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "TimeEnd",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/screenshots/getexpiredscreenshotjobs": {
+      "get": {
+        "tags": [
+          "Screenshots"
+        ],
+        "operationId": "getexpiredscreenshotjobs",
+        "parameters": [
+          {
+            "name": "PageNum",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/screenshots/deactivatescreenshotjob/{screenshotJobId}": {
+      "post": {
+        "tags": [
+          "Screenshots"
+        ],
+        "operationId": "deactivatescreenshotjob",
+        "parameters": [
+          {
+            "name": "screenshotJobId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/screenshots/gettimepointsdetails": {
+      "get": {
+        "tags": [
+          "Screenshots"
+        ],
+        "operationId": "gettimepointsdetails",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "ScreenshotJobHistoryId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Start",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "End",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimePointDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimePointDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimePointDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tags": {
+      "get": {
+        "tags": [
+          "Tags"
+        ],
+        "operationId": "tags",
+        "parameters": [
+          {
+            "name": "Skip",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Take",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Search",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/tags/link": {
+      "post": {
+        "tags": [
+          "Tags"
+        ],
+        "operationId": "linkPOST",
+        "parameters": [
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LinkObjectsModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LinkObjectsModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LinkObjectsModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagsLinkModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagsLinkModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagsLinkModel"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Tags"
+        ],
+        "operationId": "linkDELETE",
+        "parameters": [
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteLinkModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteLinkModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeleteLinkModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagsLinkModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagsLinkModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagsLinkModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tags/link/search": {
+      "post": {
+        "tags": [
+          "Tags"
+        ],
+        "operationId": "search",
+        "parameters": [
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchLinkModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchLinkModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchLinkModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagObjectModelResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagObjectModelResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagObjectModelResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/objects-type": {
+      "get": {
+        "tags": [
+          "Tags"
+        ],
+        "operationId": "objects-type",
+        "parameters": [
+          {
+            "name": "objectTypeIds",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetObjectTypesModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetObjectTypesModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetObjectTypesModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scheduler/activateScreenshotJob": {
+      "post": {
+        "tags": [
+          "TechnicalScheduler"
+        ],
+        "operationId": "activateScreenshotJob",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActivateJobRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActivateJobRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActivateJobRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scheduler/moveCamerasToMeetup": {
+      "post": {
+        "tags": [
+          "TechnicalScheduler"
+        ],
+        "operationId": "moveCamerasToMeetup",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCamerasToMeetupRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCamerasToMeetupRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCamerasToMeetupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scheduler/moveCamerasToMeetupRawPositions": {
+      "post": {
+        "tags": [
+          "TechnicalScheduler"
+        ],
+        "operationId": "moveCamerasToMeetupRawPositions",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCamerasToMeetupRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCamerasToMeetupRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCamerasToMeetupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scheduler/moveCameraToSchedulePositionAfterPtz": {
+      "post": {
+        "tags": [
+          "TechnicalScheduler"
+        ],
+        "operationId": "moveCameraToSchedulePositionAfterPtz",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCameraToSchedulePositionAfterPtzRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCameraToSchedulePositionAfterPtzRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCameraToSchedulePositionAfterPtzRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scheduler/moveCameraToPositionForSnapshot": {
+      "post": {
+        "tags": [
+          "TechnicalScheduler"
+        ],
+        "operationId": "moveCameraToPositionForSnapshot",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCameraToPositionForSnapshotRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCameraToPositionForSnapshotRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCameraToPositionForSnapshotRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scheduler/moveCameraToSchedulePosition": {
+      "post": {
+        "tags": [
+          "TechnicalScheduler"
+        ],
+        "operationId": "moveCameraToSchedulePosition",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCameraToSchedulePositionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCameraToSchedulePositionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MoveCameraToSchedulePositionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/scheduler/moveCamerasToSchedulePositions": {
+      "post": {
+        "tags": [
+          "TechnicalScheduler"
+        ],
+        "operationId": "moveCamerasToSchedulePositions",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/update-smart-group": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "update-smart-group",
+        "parameters": [
+          {
+            "name": "cameraGroupId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/delete-tags": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "delete-tags",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/update-camera-state": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "update-camera-state",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/update-camera-scou-states": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "update-camera-scou-states",
+        "parameters": [
+          {
+            "name": "cameraId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/update-medieserver-data": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "update-medieserver-data",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/create-panoramic-zip": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "create-panoramic-zip",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/update-bulk-zip": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "update-bulk-zip",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/update-order-zip": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "update-order-zip",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/renew-screenshot-job-camera-states": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "renew-screenshot-job-camera-states",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RenewScreenshotJobCameraStatesResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RenewScreenshotJobCameraStatesResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RenewScreenshotJobCameraStatesResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/update-camera-telemetry": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "update-camera-telemetry",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/reset-camera-telemetry-processing-states": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "reset-camera-telemetry-processing-states",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/check-camera-status": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "check-camera-status",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/update-smart-groups": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "update-smart-groups",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/update-closest-screenshot-jobs-with-smart-group": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "update-closest-screenshot-jobs-with-smart-group",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/update-cameras-migrated-archives-flag": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "update-cameras-migrated-archives-flag",
+        "parameters": [
+          {
+            "name": "migrationsPeriodInMinutes",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/copy-users-with-groups": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "copy-users-with-groups",
+        "parameters": [
+          {
+            "name": "maxBatchSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommonRoleModelResponse"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommonRoleModelResponse"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommonRoleModelResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/synchronize-user-ad-accounts": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "synchronize-user-ad-accounts",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/send-notification-about-camera-unblocks": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "send-notification-about-camera-unblocks",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/send-notification-about-expired-tokens": {
+      "get": {
+        "tags": [
+          "TechnicalService"
+        ],
+        "operationId": "send-notification-about-expired-tokens",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/test": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "operationId": "test",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/testNetrisSnapshot": {
+      "get": {
+        "tags": [
+          "Test"
+        ],
+        "operationId": "testNetrisSnapshot",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "byte"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/UserArmData": {
+      "post": {
+        "tags": [
+          "UserArm"
+        ],
+        "operationId": "UserArmData",
+        "parameters": [
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SaveUserArmModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SaveUserArmModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SaveUserArmModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SimpleApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetUsersByIds": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetUsersByIds",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/UserTechModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/UserTechModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/UserTechModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetUserGroupsByIds": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetUserGroupsByIds",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/UserGroupTechModel"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/UserGroupTechModel"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/UserGroupTechModel"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetCameraTitlesByIds": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetCameraTitlesByIds",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetCameraGroupTitlesByIds": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetCameraGroupTitlesByIds",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetAvailableUsersIds": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetAvailableUsersIds",
+        "parameters": [
+          {
+            "name": "RequestingUser",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetAvailableUsersLogins": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetAvailableUsersLogins",
+        "parameters": [
+          {
+            "name": "RequestingUser",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetAvailableGroupIds": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetAvailableGroupIds",
+        "parameters": [
+          {
+            "name": "RequestingUser",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetAvailableCameraGroups": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetAvailableCameraGroups",
+        "parameters": [
+          {
+            "name": "RequestingUser",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetAvailableCameras": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetAvailableCameras",
+        "parameters": [
+          {
+            "name": "RequestingUser",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetUserIds": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetUserIds",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetUserGroupIds": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetUserGroupIds",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetCameraIds": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetCameraIds",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetCameraGroupIds": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetCameraGroupIds",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PostHistoryForCreateUsers": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "PostHistoryForCreateUsers",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PostHistoryForCreateUserGroups": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "PostHistoryForCreateUserGroups",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PostHistoryForCreateCameraDevices": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "PostHistoryForCreateCameraDevices",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/PostHistoryForCreateGroupDevices": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "PostHistoryForCreateGroupDevices",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/GetRoleModelViewPermissions": {
+      "post": {
+        "tags": [
+          "UserHistoryTech"
+        ],
+        "operationId": "GetRoleModelViewPermissions",
+        "parameters": [
+          {
+            "name": "requestingUser",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleModelViewEmpowermentsResult"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleModelViewEmpowermentsResult"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RoleModelViewEmpowermentsResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/usertech/block": {
+      "post": {
+        "tags": [
+          "UserTechnical"
+        ],
+        "operationId": "block",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "AuthorAccountId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/usertech/unblock": {
+      "post": {
+        "tags": [
+          "UserTechnical"
+        ],
+        "operationId": "unblock",
+        "parameters": [
+          {
+            "name": "OriginalUserGroupId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "AuthorAccountId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/usertech/notifyblock": {
+      "post": {
+        "tags": [
+          "UserTechnical"
+        ],
+        "operationId": "notifyblock",
+        "parameters": [
+          {
+            "name": "UserId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageInfo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageInfo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MessageInfo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/usertech/user/{userId}": {
+      "get": {
+        "tags": [
+          "UserTechnical"
+        ],
+        "operationId": "user",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Tech-User-Id",
+            "in": "header",
+            "description": "Идентификатор технического пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Session-Id",
+            "in": "header",
+            "description": "Идентификатор сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Application-Id",
+            "in": "header",
+            "description": "Идентификатор сервиса ВИС",
+            "schema": {}
+          },
+          {
+            "name": "Ip",
+            "in": "header",
+            "description": "Ip-адрес сервиса ВИС, указанный при логине сессии системного пользователя",
+            "schema": {}
+          },
+          {
+            "name": "Browser",
+            "in": "header",
+            "description": "Наименование и версия обозревателя, указанные при логине сессии системного пользователя",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActivateJobRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Ids": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "UserId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "AddPackagesToQuotasRequestModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "QuotaIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "PackageIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        }
+      },
+      "CameraActionInfo": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ExecuteCameraActionResponse": {
+            "$ref": "#/components/schemas/ExecuteCameraActionResponse"
+          },
+          "BlockEndUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "CameraActionInfoRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CameraId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "CheckBlock": {
+            "type": "boolean"
+          },
+          "CameraActionRequestType": {
+            "$ref": "#/components/schemas/CameraActionRequestType"
+          }
+        }
+      },
+      "CameraActionRequestType": {
+        "type": "string",
+        "enum": [
+          "MoveCloseToGlobalHomePosition",
+          "GetCurrentPosition",
+          "MoveToGlobalHomePosition"
+        ]
+      },
+      "CameraCoverageParametersResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "LeftX": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "RightX": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "DownY": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "UpY": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
+      },
+      "CameraData": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Contract": {
+            "type": "string",
+            "nullable": true
+          },
+          "CameraStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "CameraType": {
+            "type": "string",
+            "nullable": true
+          },
+          "InExploitation": {
+            "type": "string",
+            "nullable": true
+          },
+          "CamerasCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "CameraDeviceInfo": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "FullTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "AuthType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Bitrate": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CameraModelId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "EncoderPort": {
+            "type": "string",
+            "nullable": true
+          },
+          "FirmwareVersion": {
+            "type": "string",
+            "nullable": true
+          },
+          "IpAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "LoadBalance": {
+            "type": "boolean"
+          },
+          "MediaServerId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "MediaServerType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Login": {
+            "type": "string",
+            "nullable": true
+          },
+          "Password": {
+            "type": "string",
+            "nullable": true
+          },
+          "Url": {
+            "type": "string",
+            "nullable": true
+          },
+          "ChannelId": {
+            "type": "string",
+            "nullable": true
+          },
+          "VsmKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ArchiveDepth": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "MediaServerGroupId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "StatusOnMediaServer": {
+            "$ref": "#/components/schemas/CameraStatusOnMediaServerType"
+          },
+          "RegionId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
+      },
+      "CameraGroupResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Success": {
+            "type": "boolean"
+          },
+          "CameraGroupId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ErrorMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CameraGroupRightDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CameraGroupId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Rights": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/RightDto"
+            }
+          }
+        }
+      },
+      "CameraLocation": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "CameraId"
+        ],
+        "properties": {
+          "CameraId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Latitude": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "Longitude": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "PreciseLatitude": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "PreciseLongitude": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        }
+      },
+      "CameraPtzRouterType": {
+        "type": "string",
+        "enum": [
+          "GetPanTilt",
+          "GetPosition",
+          "SetHome",
+          "SetUserPosition",
+          "ApiSetPosition",
+          "Zoom",
+          "SetPosition",
+          "BackLight",
+          "Color",
+          "DayNight",
+          "Diafragme",
+          "Focus",
+          "Move",
+          "SplitMove",
+          "ContinuousMove",
+          "MoveToPoi",
+          "CheckMoveToPoi"
+        ]
+      },
+      "CameraResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Success": {
+            "type": "boolean"
+          },
+          "CameraId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ErrorMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CameraRightsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CameraId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Rights": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/RightDto"
+            }
+          }
+        }
+      },
+      "CameraStatusOnMediaServerType": {
+        "type": "string",
+        "enum": [
+          "Unknown",
+          "InRegistration",
+          "Registered",
+          "Decommissioned",
+          "OnUpdate",
+          "OnBalancing",
+          "MediaServerNotFound",
+          "CameraNotFound",
+          "Suspended"
+        ]
+      },
+      "CameraTitleData": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Title": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CommonRoleModelResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Succeeded": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "StatusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Errors": {
+            "type": "object",
+            "nullable": true,
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "CompareHashesDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "StaffHashes": {
+            "type": "object",
+            "nullable": true,
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            }
+          }
+        }
+      },
+      "DeleteCamerasOrCameraGroupsFromPackagesRequestModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CameraIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "CameraGroupIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        }
+      },
+      "DeleteCamerasOrCameraGroupsFromPackagesResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CameraResults": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CameraResult"
+            }
+          },
+          "CameraGroupResults": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CameraGroupResult"
+            }
+          }
+        }
+      },
+      "DeleteLinkModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ObjectIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "TagIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "DeleteStaffCamerasDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "StaffId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "ExclusionNotificationModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Title": {
+            "type": "string",
+            "nullable": true
+          },
+          "Content": {
+            "type": "string",
+            "nullable": true
+          },
+          "ReceiverUserIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "SendByEmail": {
+            "type": "boolean"
+          },
+          "SendByPortal": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ExecuteCameraActionResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "AuthorId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "CameraId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ControlInRestrictedArea": {
+            "type": "boolean"
+          },
+          "UrlParameters": {
+            "$ref": "#/components/schemas/UrlParametersResponse"
+          },
+          "CameraCoverage": {
+            "$ref": "#/components/schemas/CameraCoverageParametersResponse"
+          },
+          "CameraPtzRouterType": {
+            "$ref": "#/components/schemas/CameraPtzRouterType"
+          }
+        }
+      },
+      "FileState": {
+        "type": "string",
+        "enum": [
+          "Done",
+          "InProgress",
+          "Error"
+        ]
+      },
+      "GetCamerasGroupedByOperatorAndStateRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UserGroupsIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        }
+      },
+      "GetCamerasGroupedByOperatorAndStateResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CameraDataCollection": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CameraData"
+            }
+          }
+        }
+      },
+      "GetCamerasInfoResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CameraInfos": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CameraDeviceInfo"
+            }
+          }
+        }
+      },
+      "GetCamerasTitlesRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CamerasIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        }
+      },
+      "GetCamerasTitlesResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CamerasTitles": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CameraTitleData"
+            }
+          }
+        }
+      },
+      "GetObjectTypesModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ObjectTypes": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ObjectTypeModel"
+            }
+          },
+          "Total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "GetUsersLoginRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UserIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        }
+      },
+      "GetUsersLoginResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UsersLogin": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/UserLogin"
+            }
+          }
+        }
+      },
+      "GetUsersLoginsRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UserIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        }
+      },
+      "GetUsersLoginsResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UsersLogins": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/UserLogins"
+            }
+          }
+        }
+      },
+      "GetUsersUserGroupDataRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UsersIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        }
+      },
+      "GetUsersUserGroupDataResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UsersUserGroupsData": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/UserUserGroupData"
+            }
+          }
+        }
+      },
+      "HasWorkingScreenshotScheduleInTimePeriodRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CamerasIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "StartDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "EndDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "HashedData": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "EncodedUri": {
+            "type": "string",
+            "nullable": true
+          },
+          "Hash": {
+            "type": "string",
+            "nullable": true
+          },
+          "Type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Headers": {
+            "type": "object",
+            "nullable": true,
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "IsvrMessageValue": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ActionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "VsvnId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "DitCameraId": {
+            "type": "string",
+            "nullable": true
+          },
+          "SceneDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "PlaceDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "Longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "Lattitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "AddressIsvr": {
+            "type": "string",
+            "nullable": true
+          },
+          "Url": {
+            "type": "string",
+            "nullable": true
+          },
+          "UrlPerArchiveStream": {
+            "type": "string",
+            "nullable": true
+          },
+          "DoesCameraHavePtz": {
+            "type": "boolean"
+          },
+          "MediaServerType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Depth": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "CameraModelId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "VDecodIP": {
+            "type": "string",
+            "nullable": true
+          },
+          "EncoderPort": {
+            "type": "string",
+            "nullable": true
+          },
+          "AzimuthIsvr": {
+            "type": "number",
+            "format": "double"
+          },
+          "PanoramicView": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "AdditionalInfo": {
+            "type": "string",
+            "nullable": true
+          },
+          "FirmwareVersion": {
+            "type": "string",
+            "nullable": true
+          },
+          "SerialNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "Login": {
+            "type": "string",
+            "nullable": true
+          },
+          "Password": {
+            "type": "string",
+            "nullable": true
+          },
+          "ScreenResolution": {
+            "type": "string",
+            "nullable": true
+          },
+          "Subtype": {
+            "type": "string",
+            "nullable": true
+          },
+          "ScouReportEmails": {
+            "type": "string",
+            "nullable": true
+          },
+          "IntegrationType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "FrameRate": {
+            "type": "string",
+            "nullable": true
+          },
+          "BitrateMode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsOutdoor": {
+            "type": "boolean"
+          },
+          "ServiceTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ServiceSubTypeId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
+      },
+      "IsvrMessageValueKafkaMessage": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Headers": {
+            "type": "object",
+            "nullable": true,
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "Key": {
+            "type": "string",
+            "nullable": true
+          },
+          "Value": {
+            "$ref": "#/components/schemas/IsvrMessageValue"
+          }
+        }
+      },
+      "LinkObjectsModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ObjectIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "ObjectType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "TagIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "MessageInfo": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Message": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "MoveCameraToPositionForSnapshotRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UserId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ScreenshotJobId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "PositionIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "IsGdp": {
+            "type": "boolean",
+            "nullable": true
+          }
+        }
+      },
+      "MoveCameraToSchedulePositionAfterPtzRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CameraId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "TimeStamp": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "MoveCameraToSchedulePositionRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "CameraId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "MoveCamerasToMeetupRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "SocialMeetupGuid": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "ObjectTypeModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Type": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "QuotaPackageDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "QuotaId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "PackageId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "QuotaPackageDtoCommonResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Value": {
+            "$ref": "#/components/schemas/QuotaPackageDto"
+          },
+          "Success": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "RenewScreenshotJobCameraStatesResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Count": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "RightDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Code": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsForbid": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RoleModelViewEmpowermentsResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Quotas": {
+            "type": "boolean"
+          },
+          "Roles": {
+            "type": "boolean"
+          },
+          "Functions": {
+            "type": "boolean"
+          },
+          "Packages": {
+            "type": "boolean"
+          },
+          "Exclusions": {
+            "type": "boolean"
+          }
+        }
+      },
+      "SaveUserArmModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UpdateDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "UserId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "CPUCoresCount": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ClientResolution": {
+            "type": "string",
+            "nullable": true
+          },
+          "BrowserVersion": {
+            "type": "string",
+            "nullable": true
+          },
+          "SoundDevices": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/SoundDeviceModel"
+            }
+          },
+          "HasWebGL": {
+            "type": "boolean",
+            "nullable": true
+          }
+        }
+      },
+      "ScheduleInfo": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "Interval",
+          "ScheduleId"
+        ],
+        "properties": {
+          "ScheduleId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Interval": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ScreenshotJobData": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "IsActive",
+          "ScreenshotJobHistoryId",
+          "ScreenshotJobId"
+        ],
+        "properties": {
+          "ScreenshotJobId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ScreenshotJobHistoryId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "Schedules": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ScheduleInfo"
+            }
+          }
+        }
+      },
+      "ScreenshotJobInfo": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "ScreenshotJobHistoryId",
+          "ScreenshotJobId"
+        ],
+        "properties": {
+          "ScreenshotJobId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ScreenshotJobHistoryId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Schedules": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ScheduleInfo"
+            }
+          }
+        }
+      },
+      "ScreenshotZipUrlHashDataModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "ScreenshotJobId",
+          "UserId"
+        ],
+        "properties": {
+          "DownloadUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "ScreenshotJobId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "UserId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "SearchLinkModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "TagIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "LogicOperator": {
+            "$ref": "#/components/schemas/SearchOperator"
+          },
+          "Skip": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Take": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "SearchOperator": {
+        "type": "string",
+        "enum": [
+          "Or",
+          "And"
+        ]
+      },
+      "SimpleApiResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Success": {
+            "type": "boolean"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "SoundDeviceModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "DeviceId": {
+            "type": "string",
+            "nullable": true
+          },
+          "Kind": {
+            "type": "string",
+            "nullable": true
+          },
+          "Label": {
+            "type": "string",
+            "nullable": true
+          },
+          "GroupId": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "SpoilStaffSessionDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Staff": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/StaffDto"
+            }
+          }
+        }
+      },
+      "StaffCameraGroupRightsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "StaffIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "CameraGroupRights": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CameraGroupRightDto"
+            }
+          }
+        }
+      },
+      "StaffDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ObjectId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "IsGroup": {
+            "type": "boolean"
+          }
+        }
+      },
+      "StaffIdsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Ids": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        }
+      },
+      "StaffInfoDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "InheritedQuotaId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "Priority": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsVpnEnabled": {
+            "type": "boolean"
+          },
+          "IsInherit": {
+            "type": "boolean"
+          },
+          "HasUnlimitedSession": {
+            "type": "boolean"
+          },
+          "ObjectId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "IsGroup": {
+            "type": "boolean"
+          }
+        }
+      },
+      "StaffInfoSearchRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "IsGroup": {
+            "type": "boolean"
+          },
+          "ObjectIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        }
+      },
+      "StaffInfosBatchDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "AuthorId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "StaffInfos": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/StaffInfoDto"
+            }
+          }
+        }
+      },
+      "StaffsCameraRightsDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "StaffIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          "CameraRights": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CameraRightsDto"
+            }
+          }
+        }
+      },
+      "StringSimpleApiResponseModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ResultCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Content": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "TagError": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ObjectId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "TagId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ErrorMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "TagObjectModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "TagIds": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "TagObjectModelResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Objects": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/TagObjectModel"
+            }
+          },
+          "Total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "TagsLinkModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Success": {
+            "type": "boolean"
+          },
+          "Errors": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/TagError"
+            }
+          }
+        }
+      },
+      "TimePointDetails": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "ExpectedImagesCount"
+        ],
+        "properties": {
+          "StartTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "EndTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "ExpectedImagesCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "UpdateDistrictModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "AddressId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "DistrictId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "UpdateReportStateRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ReportId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ReportState": {
+            "$ref": "#/components/schemas/FileState"
+          },
+          "ErrorMessage": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UpdateServiceTypeModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ServiceTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ServiceTypeName": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UrlParametersResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "RawCommand": {
+            "type": "string",
+            "nullable": true
+          },
+          "VsmKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "Ip": {
+            "type": "string",
+            "nullable": true
+          },
+          "Login": {
+            "type": "string",
+            "nullable": true
+          },
+          "Password": {
+            "type": "string",
+            "nullable": true
+          },
+          "ModelId": {
+            "type": "string",
+            "nullable": true
+          },
+          "ModelName": {
+            "type": "string",
+            "nullable": true
+          },
+          "CameraName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ServerUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "EncoderPort": {
+            "type": "string",
+            "nullable": true
+          },
+          "AzimuthInaccuracy": {
+            "type": "number",
+            "format": "double"
+          },
+          "CameraLatitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "CameraLongitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "CameraHeight": {
+            "type": "number",
+            "format": "double"
+          }
+        }
+      },
+      "UserGroupTechModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UserGroupId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "FullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ShortName": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsDeleted": {
+            "type": "boolean"
+          },
+          "HomePage": {
+            "type": "string",
+            "nullable": true
+          },
+          "ParentUserGroupId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          },
+          "InheritType": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "UserInfo": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "PatronimicName": {
+            "type": "string",
+            "nullable": true
+          },
+          "Email": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UserLogin": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UserId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "Login": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UserLogins": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UserId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "AdLogin": {
+            "type": "string",
+            "nullable": true
+          },
+          "SudirLogin": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "UserTechModel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "Id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "UserGroupId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "PhoneWork": {
+            "type": "string",
+            "nullable": true
+          },
+          "PhoneMobile": {
+            "type": "string",
+            "nullable": true
+          },
+          "Email": {
+            "type": "string",
+            "nullable": true
+          },
+          "ReportEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "OIV": {
+            "type": "string",
+            "nullable": true
+          },
+          "Position": {
+            "type": "string",
+            "nullable": true
+          },
+          "Comment": {
+            "type": "string",
+            "nullable": true
+          },
+          "SudirAuthTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "IsResponsible": {
+            "type": "boolean"
+          },
+          "IsDeleted": {
+            "type": "boolean"
+          },
+          "AdditionalComments": {
+            "type": "string",
+            "nullable": true
+          },
+          "IsInheritedFromGroup": {
+            "type": "boolean"
+          }
+        }
+      },
+      "UserUserGroupData": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "UserId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "UserGroupId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "UserFullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "UserGroupName": {
+            "type": "string",
+            "nullable": true
+          },
+          "ParentUserGroupName": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      }
+    }
+  }
+}

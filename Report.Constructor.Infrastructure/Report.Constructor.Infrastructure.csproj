@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Grpc.AspNetCore" Version="2.61.0" />
+        <PackageReference Include="ClosedXML" Version="0.100.3" />
+      <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.14" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Adapters\AuditAdapter\AuditAdapter.csproj" />
+      <ProjectReference Include="..\Report.Constructor.Application\Report.Constructor.Application.csproj" />
+      <ProjectReference Include="..\Report.Constructor.Core\Report.Constructor.Core.csproj" />
+      <ProjectReference Include="..\Report.Constructor.DAL\Report.Constructor.DAL.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <EmbeddedResource Include="Font\**" />
+    </ItemGroup>
+
+</Project>

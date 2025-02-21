@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="2.0.123" />
+      <PackageReference Include="Mapster" Version="7.3.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.4">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Adapters\WebServiceRestAdapter\WebServiceRestAdapter.csproj" />
+      <ProjectReference Include="..\Report.Constructor.Application\Report.Constructor.Application.csproj" />
+      <ProjectReference Include="..\Report.Constructor.Core\Report.Constructor.Core.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Update="ReportOrdersDb\StoredProcedures\**">
+          <Link>ReportsScripts\%(Filename)%(Extension)</Link>
+          <Visible>false</Visible>
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <Content Include="ReportOrdersDb\StoredProcedures\**" />
+    </ItemGroup>
+
+</Project>

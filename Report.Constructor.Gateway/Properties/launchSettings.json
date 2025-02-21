@@ -1,0 +1,95 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:6143",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7274;http://localhost:6143",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "prerelease": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:6143",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DatabasesOptions__AggregateTablesDb__Host": "HP-LS-SQL.ECHD.RU",
+        "DatabasesOptions__AggregateTablesDb__Name": "AggregateTablesPreRelease",
+        "DatabasesOptions__AggregateTablesDb__Password": "9083h^&Tg3j897G",
+        "DatabasesOptions__AggregateTablesDb__UserName": "sa",
+        "DatabasesOptions__ArchiveBalancingDb__Host": "hp-db-mvs-2.echd.ru",
+        "DatabasesOptions__ArchiveBalancingDb__Name": "ArchiveBalancingDbPreRelease",
+        "DatabasesOptions__ArchiveBalancingDb__Password": "2m8VfSPg7",
+        "DatabasesOptions__ArchiveBalancingDb__UserName": "hp-portal",
+        "DatabasesOptions__MoscowVideoDb__Host": "hp-db-mvs-2.echd.ru",
+        "DatabasesOptions__MoscowVideoDb__Name": "MoscowVideoPreReleaseNew",
+        "DatabasesOptions__MoscowVideoDb__Password": "2m8VfSPg7",
+        "DatabasesOptions__MoscowVideoDb__UserName": "hp-portal",
+        "DatabasesOptions__ReportOrdersDb__Host": "hp-db-mvs-2.echd.ru",
+        "DatabasesOptions__ReportOrdersDb__Name": "ReportOrdersDb",
+        "DatabasesOptions__ReportOrdersDb__Password": "2m8VfSPg7",
+        "DatabasesOptions__ReportOrdersDb__UserName": "hp-portal",
+        "DatabasesOptions__ReportsDb__Host": "HP-LS-SQL.ECHD.RU",
+        "DatabasesOptions__ReportsDb__Name": "ReportsPreRelease",
+        "DatabasesOptions__ReportsDb__Password": "9083h^&Tg3j897G",
+        "DatabasesOptions__ReportsDb__UserName": "sa",
+        "WebServiceRestOptions__BaseUrl": "http://hp-test.echd.ru/rest"
+      }
+    },
+    "stage": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:6143",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "stage",
+        "DatabasesOptions__AggregateTablesDb__Host": "HP-LS-SQL.ECHD.RU",
+        "DatabasesOptions__AggregateTablesDb__Name": "AggregateTablesStage",
+        "DatabasesOptions__AggregateTablesDb__Password": "9083h^&Tg3j897G",
+        "DatabasesOptions__AggregateTablesDb__UserName": "sa",
+        "DatabasesOptions__ArchiveBalancingDb__Host": "10.200.218.18",
+        "DatabasesOptions__ArchiveBalancingDb__Name": "ArchiveBalancingDb",
+        "DatabasesOptions__ArchiveBalancingDb__Password": "2m8VfSPg7",
+        "DatabasesOptions__ArchiveBalancingDb__UserName": "hp-portal",
+        "DatabasesOptions__MoscowVideoDb__Host": "10.200.218.18",
+        "DatabasesOptions__MoscowVideoDb__Name": "MoscowVideo",
+        "DatabasesOptions__MoscowVideoDb__Password": "2m8VfSPg7",
+        "DatabasesOptions__MoscowVideoDb__UserName": "hp-portal",
+        "DatabasesOptions__ReportOrdersDb__Host": "10.200.218.18",
+        "DatabasesOptions__ReportOrdersDb__Name": "ReportOrdersDbStage",
+        "DatabasesOptions__ReportOrdersDb__Password": "2m8VfSPg7",
+        "DatabasesOptions__ReportOrdersDb__UserName": "hp-portal",
+        "DatabasesOptions__ReportsDb__Host": "HP-LS-SQL.ECHD.RU",
+        "DatabasesOptions__ReportsDb__Name": "ReportsPreRelease",
+        "DatabasesOptions__ReportsDb__Password": "9083h^&Tg3j897G",
+        "DatabasesOptions__ReportsDb__UserName": "sa",
+        "WebServiceRestOptions__BaseUrl": "http://10.201.87.35:987/",
+        
+        "RabbitMqOptions__Host": "localhost",
+        "RabbitMqOptions__User": "guest",
+        "RabbitMqOptions__Password": "guest",
+        "RabbitMqOptions__CommandsQueueName": "report_commands",
+        "RabbitMqOptions__QueryQueueName": "report_queries",
+        
+        "ReportsOptions__ReportsPath": "/reports"
+      }
+    }
+  }
+}

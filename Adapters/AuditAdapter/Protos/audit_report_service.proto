@@ -1,0 +1,171 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "AuditReportServiceGenerated";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/any.proto";
+import "Protos/enums.proto";
+import "Protos/report_filters.proto";
+
+service AuditReportService {
+  rpc GetReportData (GetReportDataRequest) returns (GetReportDataResponse);
+}
+
+message GetReportDataRequest {
+  ReportType report_type = 1;
+  int64 page = 2;
+  int64 page_size = 3;
+  oneof filter {
+    TimeIntervalFilter time_interval_filter = 4;
+    OperationPlayerActionFilter operation_player_action_filter = 5;
+    OperationScreenshotJobCrudFilter operation_screenshot_job_crud_filter = 6;
+    CameraIdFilter camera_id_filter = 7;
+    TokenIdsFilter token_ids_filter = 8;
+    ArchiveViewFilter archive_view_filter = 9;
+  }
+}
+
+message GetReportDataResponse {
+  oneof data {
+    OperationOrderArchiveData operation_order_archive_data = 1;
+    UserControlData user_control_data = 2;
+    UserEditsData user_edits_data = 3;
+    OperationPlayerActionData operation_player_action_data = 4;
+    OperationGetLiveUrlData operation_get_live_url_data = 5;
+    OperationSharedLinkActionData operation_shared_link_action_data = 6;
+    UserGroupControlData user_group_control_data = 7;
+    OperationScreenshotJobCrudData operation_screenshot_job_crud_data = 8;
+    OperationMoveCommandData operation_move_command_data = 9;
+    LiveViewData live_view_data = 10;
+    ArchiveViewData archive_view_data = 11;
+  }
+}
+
+message OperationOrderArchiveData {
+  repeated OperationOrderArchiveItem items = 1;
+}
+
+message OperationOrderArchiveItem {
+  int32 archive_number = 1;
+  google.protobuf.Timestamp begin_time = 2;
+  google.protobuf.Timestamp end_time = 3;
+  string user_id = 4;
+  string camera_id = 5;
+  google.protobuf.Timestamp timestamp = 6;
+  string reason = 7;
+  string archive_task_id = 8;
+}
+
+message UserControlData {
+  repeated UserControlItem items = 1;
+}
+
+message UserControlItem {
+  string user_id = 1;
+  google.protobuf.Timestamp date = 2;
+  string camera_id = 3;
+  int32 count = 4;
+}
+
+message UserEditsData {
+  repeated UserEditsItem items = 1;
+}
+
+message UserEditsItem {
+  google.protobuf.Timestamp date = 1;
+  string user_id = 2;
+  int32 count = 4;
+}
+
+message OperationPlayerActionData {
+  repeated OperationPlayerActionItem items = 1;
+}
+
+message OperationPlayerActionItem {
+  string user_id = 1;
+  string camera_id = 2;
+  string action = 3;
+  string application_id = 4;
+  google.protobuf.Timestamp timestamp = 5;
+  google.protobuf.StringValue activity_type = 6;
+  google.protobuf.StringValue ext_login = 7;
+}
+
+message OperationGetLiveUrlData {
+  repeated OperationGetLiveUrlItem items = 1;
+}
+
+message OperationGetLiveUrlItem {
+  google.protobuf.Timestamp date = 1;
+  string user_id = 2;
+  int32 count = 4;
+}
+
+message OperationSharedLinkActionData {
+  repeated OperationSharedLinkActionItem items = 1;
+}
+
+message OperationSharedLinkActionItem {
+  string id = 1;
+  string user_id = 2;
+  string camera_id = 3;
+  int32 link_type = 4;
+  int32 action_type = 5;
+}
+
+message UserGroupControlData {
+  repeated UserGroupControlItem items = 1;
+}
+
+message UserGroupControlItem {
+  string user_id = 1;
+  google.protobuf.Timestamp date = 2;
+  int32 count = 3;
+}
+
+message OperationScreenshotJobCrudData {
+  repeated OperationScreenshotJobCrudItem items = 1;
+}
+
+message OperationScreenshotJobCrudItem {
+  string user_id = 1;
+  string job_id = 2;
+}
+
+message OperationMoveCommandData {
+  repeated OperationMoveCommandItem items = 1;
+}
+
+message OperationMoveCommandItem {
+  string user_id = 1;
+  string command = 2;
+  string application_id = 3;
+  google.protobuf.Timestamp timestamp = 4;
+}
+
+message LiveViewData {
+    repeated LiveViewItem items = 1;
+}
+
+message LiveViewItem {
+  string client_ip = 1;
+  string action = 2;
+  string application_id = 3;
+  string token_id = 4;
+  google.protobuf.Timestamp action_date = 5;
+}
+
+message ArchiveViewData {
+  repeated ArchiveViewItem items = 1;
+}
+
+message ArchiveViewItem {
+  string client_ip = 1;
+  string action = 2;
+  string application_id = 3;
+  string token_id = 4;
+  google.protobuf.Timestamp action_date = 5;
+  google.protobuf.Timestamp time_in_archive = 6;
+}

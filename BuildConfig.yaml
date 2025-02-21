@@ -1,0 +1,5 @@
+services:
+  report-constructor-service:
+    imageName: report.constructor.service
+    folderName: ./
+    dockerfile: Report.Constructor.Gateway/Dockerfile

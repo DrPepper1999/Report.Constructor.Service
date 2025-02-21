@@ -1,0 +1,3 @@
+---
+kind: template
+load: echd_pipeline.yaml
